@@ -12,7 +12,7 @@
  * check" if this file has been hand-edited and needs repair.
  */
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useLocation } from "wouter";
 
 import { slides } from "@/slideLoader";
@@ -210,6 +210,92 @@ function SlideViewer() {
   );
 }
 
+function SlideShell() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const sectionRefs = useRef<Array<HTMLDivElement | null>>([]);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const slideCount = slides.length;
+  const progress = useMemo(() => slides.map((slide) => slide.position), []);
+
+  useEffect(() => {
+    const root = scrollRef.current;
+    const sections = sectionRefs.current.filter(Boolean);
+    if (!root || sections.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (!visible) return;
+        const index = Number((visible.target as HTMLElement).dataset.index ?? "0");
+        setActiveIndex(index);
+        const targets = (visible.target as HTMLElement).querySelectorAll<HTMLElement>(
+          ".fade-up, .slide-left, .slide-right, .scale-in, [data-stagger-item]",
+        );
+        targets.forEach((target, itemIndex) => {
+          const delay = target.dataset.staggerItem ? `${itemIndex * 100}ms` : target.dataset.delay ?? "0ms";
+          target.style.transitionDelay = delay;
+          target.classList.add("is-visible");
+        });
+      },
+      { root, threshold: [0.35, 0.55, 0.75] },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const root = scrollRef.current;
+    if (!root) return;
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== "ArrowDown" && event.key !== "ArrowUp" && event.key !== "PageDown" && event.key !== "PageUp") return;
+      event.preventDefault();
+      const nextIndex =
+        event.key === "ArrowUp" || event.key === "PageUp"
+          ? Math.max(0, activeIndex - 1)
+          : Math.min(slideCount - 1, activeIndex + 1);
+      sectionRefs.current[nextIndex]?.scrollIntoView({ behavior: "smooth", block: "start" });
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [activeIndex, slideCount]);
+
+  return (
+    <div className="slide-shell" ref={scrollRef}>
+      <nav className="slide-progress" aria-label="Slide progress">
+        {progress.map((position, index) => (
+          <button
+            key={position}
+            type="button"
+            className={index === activeIndex ? "is-active" : ""}
+            aria-label={`Go to slide ${position}`}
+            onClick={() => sectionRefs.current[index]?.scrollIntoView({ behavior: "smooth", block: "start" })}
+          />
+        ))}
+      </nav>
+      {slides.map((slide, index) => (
+        <div
+          key={slide.id}
+          className="slide"
+          data-index={index}
+          ref={(node) => {
+            sectionRefs.current[index] = node;
+          }}
+        >
+          <div className="h-full w-full">
+            <slide.Component />
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function App() {
   const [location, navigate] = useLocation();
 
@@ -245,7 +331,7 @@ export default function App() {
     return () => window.removeEventListener("message", onMessage);
   }, [navigate]);
 
-  if (location === "/") return <SlideViewer />;
+  if (location === "/") return <SlideShell />;
   if (location === "/allslides") return <AllSlides />;
   return <SlideEditor />;
 }
