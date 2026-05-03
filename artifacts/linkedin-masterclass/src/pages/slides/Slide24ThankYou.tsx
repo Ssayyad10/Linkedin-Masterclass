@@ -18,9 +18,6 @@ export default function Slide24ThankYou() {
         <span style={{ color: "rgba(255,255,255,0.55)", fontSize: "1vw", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase" }}>LinkedIn Masterclass</span>
       </div>
 
-      {/* Slide number */}
-      <div style={{ position: "absolute", bottom: "4vh", right: "5vw", fontSize: "1vw", color: "rgba(255,255,255,0.3)", fontWeight: 600 }}>24 / 24</div>
-
       {/* Content */}
       <div style={{ textAlign: "center", zIndex: 1, maxWidth: "60vw" }}>
         <div style={{ fontSize: "1.1vw", fontWeight: 600, color: "rgba(255,255,255,0.5)", letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: "3vh" }}>
@@ -46,10 +43,17 @@ export default function Slide24ThankYou() {
           <span style={{ fontSize: "1.5vw", fontWeight: 700, color: "#0A66C2" }}>Start Now. linkedin.com</span>
         </div>
 
-        {/* Speaker credit */}
-        <div style={{ marginTop: "3vh", display: "flex", alignItems: "center", gap: "0.6vw", justifyContent: "center" }}>
-          <svg width="1.2vw" height="1.2vw" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" strokeWidth="2" strokeLinecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          <span style={{ fontSize: "1.1vw", color: "rgba(255,255,255,0.45)", fontWeight: 500 }}>Presented by <span style={{ color: "rgba(255,255,255,0.75)", fontWeight: 700 }}>Sohel Sayyad</span></span>
+        {/* Speaker credit with photo */}
+        <div style={{ marginTop: "3.5vh", display: "inline-flex", alignItems: "center", gap: "0.9vw", padding: "1vh 1.8vw", borderRadius: "100px", background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)" }}>
+          <img
+            src="/linkedin-masterclass/sohel.png"
+            alt="Sohel Sayyad"
+            style={{ width: "4.5vh", height: "4.5vh", borderRadius: "50%", objectFit: "cover", border: "2px solid rgba(255,255,255,0.35)", flexShrink: 0 }}
+          />
+          <div style={{ textAlign: "left" }}>
+            <div style={{ fontSize: "1.1vw", fontWeight: 700, color: "#fff" }}>Sohel Sayyad</div>
+            <div style={{ fontSize: "0.9vw", color: "rgba(255,255,255,0.5)", marginTop: "0.1vh" }}>B.Tech CSE · DBATU · Presenter</div>
+          </div>
         </div>
       </div>
     </div>

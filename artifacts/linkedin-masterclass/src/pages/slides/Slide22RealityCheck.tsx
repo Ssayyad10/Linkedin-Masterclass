@@ -11,8 +11,6 @@ export default function Slide22RealityCheck() {
         </div>
       </div>
 
-      {/* Slide number */}
-      <div style={{ position: "absolute", bottom: "4vh", right: "5vw", fontSize: "1vw", color: "rgba(255,255,255,0.2)", fontWeight: 600 }}>22 / 24</div>
 
       {/* Subtle divider lines */}
       <div style={{ position: "absolute", left: 0, top: "50%", right: 0, height: "1px", background: "rgba(255,255,255,0.05)" }} />

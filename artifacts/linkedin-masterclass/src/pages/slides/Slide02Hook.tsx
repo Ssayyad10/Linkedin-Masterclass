@@ -11,8 +11,6 @@ export default function Slide02Hook() {
         </div>
       </div>
 
-      {/* Slide number */}
-      <div style={{ position: "absolute", bottom: "4vh", right: "5vw", fontSize: "1vw", color: "#E5E7EB", fontWeight: 600 }}>02 / 24</div>
 
       {/* Content */}
       <div style={{ textAlign: "center", maxWidth: "65vw" }}>

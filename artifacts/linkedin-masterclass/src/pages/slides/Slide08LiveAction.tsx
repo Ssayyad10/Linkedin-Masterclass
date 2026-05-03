@@ -11,8 +11,6 @@ export default function Slide08LiveAction() {
         </div>
       </div>
 
-      {/* Slide number */}
-      <div style={{ position: "absolute", bottom: "4vh", right: "5vw", fontSize: "1vw", color: "rgba(255,255,255,0.35)", fontWeight: 600 }}>08 / 24</div>
 
       {/* Clock icon */}
       <div style={{ width: "7vh", height: "7vh", borderRadius: "50%", background: "rgba(255,255,255,0.15)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "3vh" }}>

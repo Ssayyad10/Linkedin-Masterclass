@@ -210,6 +210,54 @@ function SlideViewer() {
   );
 }
 
+// Slides with dark backgrounds — slide number overlay uses light text on these
+const DARK_SLIDE_POSITIONS = new Set([8, 22, 24]);
+
+function PortraitFallback() {
+  return (
+    <div className="portrait-fallback">
+      <div style={{ textAlign: "center", fontFamily: "'Plus Jakarta Sans', sans-serif", padding: "2rem" }}>
+        <div
+          style={{
+            width: "3.5rem",
+            height: "3.5rem",
+            background: "#0A66C2",
+            borderRadius: "0.6rem",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            margin: "0 auto 1.5rem",
+          }}
+        >
+          <span style={{ color: "#fff", fontWeight: 800, fontSize: "1.8rem", lineHeight: 1 }}>in</span>
+        </div>
+        <div style={{ fontSize: "1.3rem", fontWeight: 800, color: "#111", marginBottom: "0.75rem" }}>
+          LinkedIn Masterclass
+        </div>
+        <div style={{ fontSize: "0.95rem", color: "#666", lineHeight: 1.65, marginBottom: "1.5rem" }}>
+          This presentation is designed for<br />desktop or laptop in landscape mode.
+        </div>
+        <div
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            gap: "0.5rem",
+            padding: "0.6rem 1.4rem",
+            borderRadius: "100px",
+            background: "#F7F9FB",
+            border: "1px solid #E5E7EB",
+            fontSize: "0.85rem",
+            color: "#9CA3AF",
+          }}
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" strokeWidth="2" strokeLinecap="round"><path d="M21 12H3"/><path d="M21 6H3"/><path d="M21 18H3"/></svg>
+          Rotate device or open on a wider screen
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function SlideShell() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const sectionRefs = useRef<Array<HTMLDivElement | null>>([]);
@@ -272,33 +320,43 @@ function SlideShell() {
   }, [activeIndex, slideCount]);
 
   return (
-    <div className="slide-shell" ref={scrollRef}>
-      <nav className="slide-progress" aria-label="Slide progress">
-        {progress.map((position, index) => (
-          <button
-            key={position}
-            type="button"
-            className={index === activeIndex ? "is-active" : ""}
-            aria-label={`Go to slide ${position}`}
-            onClick={() => sectionRefs.current[index]?.scrollIntoView({ behavior: "smooth", block: "start" })}
-          />
-        ))}
-      </nav>
-      {slides.map((slide, index) => (
-        <div
-          key={slide.id}
-          className="slide"
-          data-index={index}
-          ref={(node) => {
-            sectionRefs.current[index] = node;
-          }}
-        >
-          <div className="h-full w-full">
-            <slide.Component />
-          </div>
-        </div>
-      ))}
-    </div>
+    <>
+      <PortraitFallback />
+      <div className="slide-shell" ref={scrollRef}>
+        <nav className="slide-progress" aria-label="Slide progress">
+          {progress.map((position, index) => (
+            <button
+              key={position}
+              type="button"
+              className={index === activeIndex ? "is-active" : ""}
+              aria-label={`Go to slide ${position}`}
+              onClick={() => sectionRefs.current[index]?.scrollIntoView({ behavior: "smooth", block: "start" })}
+            />
+          ))}
+          <div className="slide-nav-hint">↑↓</div>
+        </nav>
+        {slides.map((slide, index) => {
+          const isDark = DARK_SLIDE_POSITIONS.has(slide.position);
+          return (
+            <div
+              key={slide.id}
+              className={`slide${isDark ? " slide--dark" : ""}`}
+              data-index={index}
+              ref={(node) => {
+                sectionRefs.current[index] = node;
+              }}
+            >
+              <div className="slide-num" aria-hidden="true">
+                {String(slide.position).padStart(2, "0")} / {slideCount}
+              </div>
+              <div className="h-full w-full">
+                <slide.Component />
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </>
   );
 }
 

@@ -105,10 +105,53 @@ body {
   transform: scale(1.35);
 }
 
+/* Portrait / mobile: hide shell, show fallback */
+.portrait-fallback {
+  display: none;
+}
+
 @media (max-width: 1023px) {
   .slide-shell {
     display: none;
   }
+
+  .portrait-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100dvh;
+    background: #ffffff;
+  }
+}
+
+/* Slide number overlay — injected by SlideShell for all slides */
+.slide-num {
+  position: absolute;
+  bottom: 4vh;
+  right: 5vw;
+  font-size: 1vw;
+  font-weight: 600;
+  color: #e5e7eb;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  pointer-events: none;
+  z-index: 20;
+  letter-spacing: 0.03em;
+}
+
+.slide--dark .slide-num {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+/* Keyboard nav hint below progress dots */
+.slide-nav-hint {
+  margin-top: 0.4rem;
+  font-size: 0.6rem;
+  color: rgba(10, 102, 194, 0.35);
+  text-align: center;
+  letter-spacing: 0.04em;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  user-select: none;
 }
 
 .fade-up,

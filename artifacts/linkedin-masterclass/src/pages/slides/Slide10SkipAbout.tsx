@@ -7,8 +7,6 @@ export default function Slide10SkipAbout() {
       {/* Left accent */}
       <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: "0.35vw", background: "#0A66C2" }} />
 
-      {/* Slide number */}
-      <div style={{ position: "absolute", bottom: "4vh", right: "5vw", fontSize: "1vw", color: "#E5E7EB", fontWeight: 600 }}>10 / 24</div>
 
       <div style={{ flex: 1, display: "flex" }}>
         {/* Left */}
