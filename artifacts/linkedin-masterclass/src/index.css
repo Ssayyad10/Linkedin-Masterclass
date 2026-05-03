@@ -47,6 +47,12 @@ body {
   overflow: hidden;
   scroll-snap-align: start;
   position: relative;
+}
+
+/* Entry animation scoped to the presentation shell only.
+   AllSlides (PPT export) and SlideEditor (canvas/single-slide view)
+   must NOT get opacity:0 — they need slides visible from the start. */
+.slide-shell .slide {
   opacity: 0;
   transform: translateY(28px);
   will-change: transform, opacity;
@@ -54,7 +60,7 @@ body {
               transform 0.72s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.slide.is-entered {
+.slide-shell .slide.is-entered {
   opacity: 1;
   transform: none;
 }
