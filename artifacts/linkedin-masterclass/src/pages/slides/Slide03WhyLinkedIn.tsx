@@ -79,7 +79,7 @@ export default function Slide03WhyLinkedIn() {
           {/* Profile section */}
           <div style={{ padding: "1.8vh 1.8vw", borderBottom: "1px solid #E5E7EB", background: "#fff" }}>
             <div style={{ display: "flex", gap: "1vw", alignItems: "center" }}>
-              <img src="https://i.pravatar.cc/150?img=12" alt="Sohel Sayyad" style={{ width: "5.5vh", height: "5.5vh", borderRadius: "50%", objectFit: "cover", flexShrink: 0 }} />
+              <img src="/linkedin-masterclass/sohel.png" alt="Sohel Sayyad" style={{ width: "5.5vh", height: "5.5vh", borderRadius: "50%", objectFit: "cover", flexShrink: 0 }} />
               <div>
                 <div style={{ fontSize: "1.3vw", fontWeight: 700, color: "#111111" }}>Sohel Sayyad</div>
                 <div style={{ fontSize: "1vw", color: "#666666" }}>B.Tech Student · DBATU · Open to Internships</div>

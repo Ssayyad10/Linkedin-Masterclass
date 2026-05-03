@@ -51,7 +51,7 @@ export default function Slide09Headline() {
             <div style={{ height: "7vh", background: "linear-gradient(135deg, #0A66C2, #004182)" }} />
             <div style={{ padding: "0 1.8vw 1.8vw" }}>
               <div style={{ marginTop: "-3.5vh", marginBottom: "1vh" }}>
-                <img src="https://i.pravatar.cc/150?img=12" alt="Sohel Sayyad" style={{ width: "6.5vh", height: "6.5vh", borderRadius: "50%", objectFit: "cover", border: "0.3vh solid #fff", display: "block" }} />
+                <img src="/linkedin-masterclass/sohel.png" alt="Sohel Sayyad" style={{ width: "6.5vh", height: "6.5vh", borderRadius: "50%", objectFit: "cover", border: "0.3vh solid #fff", display: "block" }} />
               </div>
               <div style={{ fontSize: "1.4vw", fontWeight: 700, color: "#111111" }}>Sohel Sayyad</div>
 
