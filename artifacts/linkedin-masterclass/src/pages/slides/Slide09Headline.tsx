@@ -55,7 +55,7 @@ export default function Slide09Headline() {
                   <svg width="45%" height="45%" viewBox="0 0 24 24" fill="#3B82F6"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
                 </div>
               </div>
-              <div style={{ fontSize: "1.4vw", fontWeight: 700, color: "#111111" }}>Priya Sharma</div>
+              <div style={{ fontSize: "1.4vw", fontWeight: 700, color: "#111111" }}>Rahul Sharma</div>
 
               {/* Highlighted headline */}
               <div style={{ marginTop: "1vh", padding: "0.8vh 1vw", borderRadius: "0.5vw", background: "rgba(10,102,194,0.07)", border: "1.5px solid rgba(10,102,194,0.3)" }}>

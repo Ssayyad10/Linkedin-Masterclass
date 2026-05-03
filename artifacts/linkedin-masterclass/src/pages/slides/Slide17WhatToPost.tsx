@@ -54,10 +54,10 @@ export default function Slide17WhatToPost() {
           <div style={{ background: "#fff", borderRadius: "1.2vw", border: "1px solid #E5E7EB", padding: "1.8vh 2vw", boxShadow: "0 0.3vh 1.5vh rgba(0,0,0,0.06)" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "0.8vw", marginBottom: "1.2vh" }}>
               <div style={{ width: "4.5vh", height: "4.5vh", borderRadius: "50%", background: "linear-gradient(135deg, #0A66C2, #004182)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                <span style={{ color: "#fff", fontWeight: 700, fontSize: "1.8vh" }}>P</span>
+                <span style={{ color: "#fff", fontWeight: 700, fontSize: "1.8vh" }}>R</span>
               </div>
               <div>
-                <div style={{ fontSize: "1.1vw", fontWeight: 700, color: "#111" }}>Priya Sharma</div>
+                <div style={{ fontSize: "1.1vw", fontWeight: 700, color: "#111" }}>Rahul Sharma</div>
                 <div style={{ fontSize: "0.95vw", color: "#9CA3AF" }}>2 days ago</div>
               </div>
             </div>
@@ -75,10 +75,10 @@ export default function Slide17WhatToPost() {
           <div style={{ background: "#fff", borderRadius: "1.2vw", border: "1px solid #E5E7EB", padding: "1.8vh 2vw", boxShadow: "0 0.3vh 1.5vh rgba(0,0,0,0.06)" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "0.8vw", marginBottom: "1.2vh" }}>
               <div style={{ width: "4.5vh", height: "4.5vh", borderRadius: "50%", background: "linear-gradient(135deg, #0A66C2, #004182)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                <span style={{ color: "#fff", fontWeight: 700, fontSize: "1.8vh" }}>P</span>
+                <span style={{ color: "#fff", fontWeight: 700, fontSize: "1.8vh" }}>R</span>
               </div>
               <div>
-                <div style={{ fontSize: "1.1vw", fontWeight: 700, color: "#111" }}>Priya Sharma</div>
+                <div style={{ fontSize: "1.1vw", fontWeight: 700, color: "#111" }}>Rahul Sharma</div>
                 <div style={{ fontSize: "0.95vw", color: "#9CA3AF" }}>1 week ago</div>
               </div>
             </div>

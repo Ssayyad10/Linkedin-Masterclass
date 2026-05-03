@@ -45,6 +45,12 @@ export default function Slide24ThankYou() {
           <div style={{ width: "1.8vh", height: "1.8vh", borderRadius: "50%", background: "#0A66C2" }} />
           <span style={{ fontSize: "1.5vw", fontWeight: 700, color: "#0A66C2" }}>Start Now. linkedin.com</span>
         </div>
+
+        {/* Speaker credit */}
+        <div style={{ marginTop: "3vh", display: "flex", alignItems: "center", gap: "0.6vw", justifyContent: "center" }}>
+          <svg width="1.2vw" height="1.2vw" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" strokeWidth="2" strokeLinecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span style={{ fontSize: "1.1vw", color: "rgba(255,255,255,0.45)", fontWeight: 500 }}>Presented by <span style={{ color: "rgba(255,255,255,0.75)", fontWeight: 700 }}>Sohel Sayyad</span></span>
+        </div>
       </div>
     </div>
   );

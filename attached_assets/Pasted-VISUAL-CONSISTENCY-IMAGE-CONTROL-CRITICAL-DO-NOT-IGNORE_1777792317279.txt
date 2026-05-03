@@ -1,0 +1,66 @@
+VISUAL CONSISTENCY & IMAGE CONTROL (CRITICAL — DO NOT IGNORE):
+
+All images and mockups must follow strict consistency rules:
+
+1. HUMAN IMAGES:
+- Use ONLY one consistent character across all slides (same gender, same appearance, same style)
+- Default character: Indian male first-year engineering student (age 17–19), simple clothing, clean look
+- DO NOT mix different people across slides
+- DO NOT mismatch gender (no female image with male name or vice versa)
+- Avoid stock-photo feel — use natural, realistic, minimal backgrounds (hostel room, study desk, simple home)
+
+2. STYLE OF IMAGES:
+- Prefer realistic, soft-light photography OR clean semi-realistic illustration
+- NO random stock photos
+- NO overly posed corporate images
+- NO kawaii / cartoon / anime style
+- Keep tone calm, minimal, and believable
+
+3. LINKEDIN UI MOCKUPS (MANDATORY):
+- DO NOT skip visuals — every relevant slide MUST include a UI mockup
+- Mockups must look like real LinkedIn interface:
+  - White background
+  - Blue accents (#0A66C2)
+  - Clean typography
+- Include:
+  - Profile screen
+  - Signup screen
+  - Education section
+  - Skills section
+  - Certificates section
+  - Connection button UI
+  - Chat/message UI
+  - Post UI
+
+4. NO MISSING VISUALS:
+- Every slide must contain at least ONE visual element:
+  - UI mockup OR
+  - Consistent character image OR
+  - Clean UI-style card/diagram
+- Do not leave slides empty
+
+5. IMAGE QUALITY:
+- High resolution
+- Sharp and clean
+- No blur, no pixelation
+- No watermarks
+
+6. CONTENT ACCURACY IN MOCKUPS:
+- Names used must match gender (e.g., Rahul for male, not female image)
+- Use neutral or realistic Indian names if needed
+- Text inside UI should be readable and relevant (not lorem ipsum)
+
+7. COMPOSITION RULE:
+- Place visuals on RIGHT side or as centered cards
+- Maintain whitespace
+- Do not clutter slide with multiple unrelated images
+
+8. CONSISTENCY CHECK (FINAL PASS):
+Before generating final output:
+- Ensure same person is used across slides
+- Ensure no missing images
+- Ensure all UI mockups are present
+- Ensure no gender/name mismatch
+- Ensure style is consistent across entire deck
+
+If these conditions are not met, regenerate visuals before finalizing.

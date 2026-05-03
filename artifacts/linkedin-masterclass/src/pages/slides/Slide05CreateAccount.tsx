@@ -82,7 +82,7 @@ export default function Slide05CreateAccount() {
               <div style={{ flex: 1 }}>
                 <div style={{ fontSize: "1vw", color: "#666", marginBottom: "0.4vh" }}>First name</div>
                 <div style={{ border: "1.5px solid #0A66C2", borderRadius: "0.4vw", padding: "0.8vh 0.8vw", fontSize: "1.1vw", color: "#111", background: "#F7F9FB" }}>
-                  Priya
+                  Rahul
                 </div>
               </div>
               <div style={{ flex: 1 }}>
@@ -97,7 +97,7 @@ export default function Slide05CreateAccount() {
             <div style={{ marginBottom: "1.2vh" }}>
               <div style={{ fontSize: "1vw", color: "#666", marginBottom: "0.4vh" }}>Email or phone number</div>
               <div style={{ border: "1px solid #D1D5DB", borderRadius: "0.4vw", padding: "0.8vh 0.8vw", fontSize: "1.1vw", color: "#9CA3AF", background: "#fff" }}>
-                priya@gmail.com
+                rahul@gmail.com
               </div>
             </div>
 

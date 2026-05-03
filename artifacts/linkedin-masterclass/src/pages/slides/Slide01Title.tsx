@@ -49,6 +49,12 @@ export default function Slide01Title() {
           For First-Year Engineering Students
         </div>
 
+        {/* Speaker */}
+        <div style={{ marginTop: "2vh", display: "flex", alignItems: "center", gap: "0.6vw" }}>
+          <svg width="1.3vw" height="1.3vw" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" strokeWidth="2" strokeLinecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <div style={{ fontSize: "1.2vw", color: "#9CA3AF", fontWeight: 500 }}>Presented by <span style={{ color: "#0A66C2", fontWeight: 700 }}>Sohel Sayyad</span></div>
+        </div>
+
         {/* Tags */}
         <div className="flex gap-[0.8vw]" style={{ marginTop: "3vh" }}>
           <div style={{ padding: "0.5vh 1.1vw", borderRadius: "100px", background: "#F7F9FB", border: "1px solid #E5E7EB", fontSize: "1.1vw", fontWeight: 600, color: "#0A66C2" }}>Free</div>
