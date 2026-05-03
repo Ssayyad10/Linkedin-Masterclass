@@ -7,14 +7,13 @@ import path from "path";
 
 const app: Express = express();
 
-// ✅ Serve React build (presentation)
-app.use(express.static(path.resolve("../../linkedin-masterclass/dist")));
+// ✅ FIXED PATH
+const frontendPath = path.resolve("artifacts/linkedin-masterclass/dist");
 
-// ✅ Show presentation on homepage
+app.use(express.static(frontendPath));
+
 app.get("/", (req, res) => {
-  res.sendFile(
-    path.resolve("../../linkedin-masterclass/dist/index.html")
-  );
+  res.sendFile(path.join(frontendPath, "index.html"));
 });
 
 // Logging
