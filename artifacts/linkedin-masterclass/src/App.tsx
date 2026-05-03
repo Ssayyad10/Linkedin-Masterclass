@@ -289,20 +289,28 @@ function PortraitFallback() {
   );
 }
 
-// Stagger-animate direct content children of a slide when it enters viewport.
-// Skips absolutely-positioned decorative overlays (badges, labels, etc.).
-function animateSlideContent(slideEl: HTMLDivElement) {
+// Returns the non-absolute direct content children of a slide.
+function getAnimatableChildren(slideEl: HTMLDivElement): HTMLElement[] {
   const contentRoot = slideEl.querySelector<HTMLElement>(".h-full.w-full > *");
-  if (!contentRoot) return;
-  const children = Array.from(contentRoot.children) as HTMLElement[];
-  const animatable = children.filter(
+  if (!contentRoot) return [];
+  return (Array.from(contentRoot.children) as HTMLElement[]).filter(
     (c) => window.getComputedStyle(c).position !== "absolute",
   );
-  animatable.forEach((child, i) => {
+}
+
+// Pre-apply stagger-child at mount so elements start at opacity:0 inside
+// their still-invisible slide wrappers — no visible flash.
+function prepareSlideContent(slideEl: HTMLDivElement) {
+  getAnimatableChildren(slideEl).forEach((child, i) => {
+    child.style.animationDelay = `${i * 130}ms`;
     child.classList.add("stagger-child");
-    setTimeout(() => {
-      requestAnimationFrame(() => child.classList.add("is-animated"));
-    }, i * 130);
+  });
+}
+
+// Play the paused animation (called when slide enters viewport).
+function triggerSlideContent(slideEl: HTMLDivElement) {
+  getAnimatableChildren(slideEl).forEach((child) => {
+    child.classList.add("is-animated");
   });
 }
 
@@ -314,12 +322,18 @@ function SlideShell() {
   const slideCount = slides.length;
   const progress = useMemo(() => slides.map((slide) => slide.position), []);
 
-  // Seed first slide as immediately visible (no flicker on load)
+  // At mount: prepare ALL slides (stagger-child pre-applied while wrappers are
+  // still opacity:0), then immediately reveal slide 1.
   useEffect(() => {
-    const first = sectionRefs.current[0];
+    const sections = sectionRefs.current.filter(Boolean) as HTMLDivElement[];
+    sections.forEach(prepareSlideContent);
+
+    const first = sections[0];
     if (first) {
       first.classList.add("is-entered");
-      setTimeout(() => animateSlideContent(first), 180);
+      first.dataset.animated = "true";
+      // Small delay so the slide fade-in starts before content animates in
+      setTimeout(() => triggerSlideContent(first), 120);
     }
   }, []);
 
@@ -345,10 +359,10 @@ function SlideShell() {
           sectionRefs.current[i]?.classList.add("is-entered");
         }
 
-        // Stagger-animate content children the first time a slide enters
+        // Trigger stagger animations the first time a slide enters
         if (!slideEl.dataset.animated) {
           slideEl.dataset.animated = "true";
-          animateSlideContent(slideEl);
+          triggerSlideContent(slideEl);
         }
       },
       { root, threshold: [0.2, 0.5, 0.8] },
