@@ -5,7 +5,13 @@ import router from "./routes";
 import { logger } from "./lib/logger";
 
 const app: Express = express();
+import path from "path";
 
+app.use(express.static(path.resolve("attached_assets")));
+
+app.get("/", (req, res) => {
+  res.sendFile(path.resolve("attached_assets/index.html"));
+});
 app.use(
   pinoHttp({
     logger,
