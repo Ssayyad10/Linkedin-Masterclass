@@ -289,6 +289,23 @@ function PortraitFallback() {
   );
 }
 
+// Stagger-animate direct content children of a slide when it enters viewport.
+// Skips absolutely-positioned decorative overlays (badges, labels, etc.).
+function animateSlideContent(slideEl: HTMLDivElement) {
+  const contentRoot = slideEl.querySelector<HTMLElement>(".h-full.w-full > *");
+  if (!contentRoot) return;
+  const children = Array.from(contentRoot.children) as HTMLElement[];
+  const animatable = children.filter(
+    (c) => window.getComputedStyle(c).position !== "absolute",
+  );
+  animatable.forEach((child, i) => {
+    child.classList.add("stagger-child");
+    setTimeout(() => {
+      requestAnimationFrame(() => child.classList.add("is-animated"));
+    }, i * 130);
+  });
+}
+
 function SlideShell() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const sectionRefs = useRef<Array<HTMLDivElement | null>>([]);
@@ -300,7 +317,10 @@ function SlideShell() {
   // Seed first slide as immediately visible (no flicker on load)
   useEffect(() => {
     const first = sectionRefs.current[0];
-    if (first) first.classList.add("is-entered");
+    if (first) {
+      first.classList.add("is-entered");
+      setTimeout(() => animateSlideContent(first), 180);
+    }
   }, []);
 
   useEffect(() => {
@@ -324,12 +344,39 @@ function SlideShell() {
         for (let i = 0; i <= index; i++) {
           sectionRefs.current[i]?.classList.add("is-entered");
         }
+
+        // Stagger-animate content children the first time a slide enters
+        if (!slideEl.dataset.animated) {
+          slideEl.dataset.animated = "true";
+          animateSlideContent(slideEl);
+        }
       },
       { root, threshold: [0.2, 0.5, 0.8] },
     );
 
     sections.forEach((section) => observer.observe(section));
     return () => observer.disconnect();
+  }, []);
+
+  // Parallax: background layer moves at 6% of scroll delta — creates depth
+  useEffect(() => {
+    const shell = scrollRef.current;
+    if (!shell) return;
+
+    const onScroll = () => {
+      const scrollTop = shell.scrollTop;
+      const viewH = shell.clientHeight || window.innerHeight;
+      sectionRefs.current.forEach((section, i) => {
+        if (!section) return;
+        const slideTop = i * viewH;
+        const offset = (scrollTop - slideTop) * 0.06;
+        const bg = section.querySelector<HTMLElement>(".slide-bg");
+        if (bg) bg.style.transform = `translateY(${offset}px)`;
+      });
+    };
+
+    shell.addEventListener("scroll", onScroll, { passive: true });
+    return () => shell.removeEventListener("scroll", onScroll);
   }, []);
 
   useEffect(() => {

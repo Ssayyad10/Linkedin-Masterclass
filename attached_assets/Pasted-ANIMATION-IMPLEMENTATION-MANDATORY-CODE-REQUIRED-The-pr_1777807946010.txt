@@ -1,0 +1,158 @@
+ANIMATION IMPLEMENTATION (MANDATORY — CODE REQUIRED):
+
+The presentation MUST include REAL WORKING ANIMATIONS using HTML, CSS, and JavaScript.
+
+Do NOT simulate animation visually.
+Do NOT describe animation.
+Actually IMPLEMENT animation in code.
+
+---
+
+1. TECH REQUIREMENT:
+
+* Use HTML + CSS + Vanilla JavaScript ONLY
+* No static slides
+* No design-only output
+* Output must be runnable in browser
+
+---
+
+2. SLIDE STRUCTURE:
+
+Each slide:
+
+<section class="slide">
+
+Container:
+
+<div class="content">
+
+---
+
+3. ENABLE SCROLL SYSTEM:
+
+CSS:
+html {
+scroll-behavior: smooth;
+}
+
+body {
+scroll-snap-type: y mandatory;
+overflow-y: scroll;
+}
+
+.slide {
+height: 100vh;
+scroll-snap-align: start;
+}
+
+---
+
+4. ENTRY ANIMATIONS (REQUIRED):
+
+All elements must animate on entering viewport.
+
+Create classes:
+
+.fade-up
+.slide-left
+.slide-right
+.scale-in
+
+Initial state:
+opacity: 0;
+transform: translateY(40px);
+
+Active state:
+opacity: 1;
+transform: translateY(0);
+
+Transition:
+0.6s–0.8s cubic-bezier(0.22, 1, 0.36, 1)
+
+---
+
+5. JAVASCRIPT (MANDATORY):
+
+Use Intersection Observer:
+
+* Detect when elements enter viewport
+* Add class "show" to trigger animation
+
+Example behavior:
+When .fade-up enters → add .show
+
+---
+
+6. STAGGER ANIMATION:
+
+For lists/cards:
+
+* Add delay increments:
+  0ms, 100ms, 200ms, 300ms
+
+---
+
+7. HOVER INTERACTIONS:
+
+Cards:
+transform: translateY(-6px);
+transition: 0.2s ease;
+
+Buttons:
+scale: 1.03;
+
+---
+
+8. BACKGROUND ANIMATION (REQUIRED):
+
+Each slide must include animated background elements:
+
+* Floating blobs or circles
+* Slow movement using keyframes
+
+Example:
+@keyframes float {
+0% { transform: translateY(0); }
+50% { transform: translateY(-20px); }
+100% { transform: translateY(0); }
+}
+
+Duration: 6–10 seconds infinite
+
+Opacity: low (0.1–0.2)
+
+---
+
+9. PARALLAX EFFECT:
+
+Background moves slower than content:
+
+transform: translateY(scroll * 0.3)
+
+---
+
+10. PROGRESS INDICATOR:
+
+* Vertical dots on right side
+* Highlight active slide
+* Click → scroll to slide
+
+---
+
+11. PERFORMANCE RULES:
+
+* Use will-change: transform, opacity
+* Avoid heavy libraries
+* Keep animations smooth (60fps)
+
+---
+
+12. FINAL OUTPUT REQUIREMENT:
+
+* Provide FULL WORKING CODE (HTML + CSS + JS)
+* Animations must work when opened in browser
+* No placeholders like “animation here”
+* No missing JavaScript
+
+If animations are not implemented in code, regenerate.

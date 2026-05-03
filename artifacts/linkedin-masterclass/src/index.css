@@ -212,6 +212,26 @@ body {
   box-shadow: 0 18px 42px rgba(0, 0, 0, 0.12);
 }
 
+/* ---- Stagger entry animations (JS adds .is-animated with per-child delay) ---- */
+.stagger-child {
+  opacity: 0;
+  transform: translateY(24px);
+  will-change: transform, opacity;
+  transition:
+    opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.stagger-child.is-animated {
+  opacity: 1;
+  transform: none;
+}
+
+/* Parallax host: will-change for smooth GPU compositing */
+.slide-bg {
+  will-change: transform;
+}
+
 /* ===========================================
    ANIMATED BACKGROUND SYSTEM
    =========================================== */
