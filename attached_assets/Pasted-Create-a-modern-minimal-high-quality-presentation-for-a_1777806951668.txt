@@ -1,0 +1,121 @@
+Create a modern, minimal, high-quality presentation for a LinkedIn masterclass aimed at first-year engineering students from rural backgrounds.
+
+Tone: Simple, beginner-friendly, motivating
+Style: Minimal, clean, Gen Z aesthetic (premium, not flashy)
+
+Color Palette:
+
+* White / light background
+* Accent: #0A66C2 (LinkedIn blue)
+* Neutral blacks and greys
+
+Typography:
+
+* Headings: bold, modern sans-serif
+* Body: clean, highly readable
+
+---
+
+CRITICAL INSTRUCTION (VERY IMPORTANT):
+
+Automatically generate and insert realistic UI mockups and visuals throughout the slides.
+
+Include:
+
+* LinkedIn profile mockups (profile page, headline, about section)
+* LinkedIn post mockups
+* LinkedIn message/chat UI mockups
+* Before vs after profile comparisons
+* Student using laptop (realistic photos)
+* Clean UI cards that resemble LinkedIn interface
+
+Mockups should:
+
+* Look realistic and modern
+* Match LinkedIn’s design language (clean, white, blue accents)
+* Be placed on the right side or as cards
+* Never feel like stock clutter
+
+---
+
+DESIGN RULES:
+
+* Use lots of whitespace
+* Max 3–4 bullet points per slide
+* Use icons + UI visuals instead of heavy text
+* Maintain consistent spacing and alignment
+* Use rounded cards and soft shadows
+* Keep layouts clean and structured
+
+---
+
+ANIMATION:
+
+* Smooth fade and slide transitions
+* No flashy or distracting effects
+
+---
+
+SLIDE STRUCTURE:
+
+1. Title Slide
+   Minimal with student + laptop background
+
+2. Hook
+   Big typography, no clutter
+
+3. Why LinkedIn
+   Add simple icons + subtle UI card
+
+4. Instagram vs LinkedIn
+   Split screen comparison visual
+
+5. Account Creation
+   Step cards UI style
+
+6. Profile Photo
+   Include good vs bad photo examples
+
+7. Headline
+   Include LinkedIn profile mockup showing headline
+
+8. About Section
+   Show realistic profile "About" UI
+
+9. Education + Skills
+   Use UI cards
+
+10. Networking
+    Include connection illustration or UI
+
+11. Message Example
+    Create LinkedIn chat mockup
+
+12. What to Post
+    Include post UI preview
+
+13. Post Example
+    Full LinkedIn-style post mockup
+
+14. What Not to Do
+    Use warning icons + minimal design
+
+15. Weekly Plan
+    Timeline UI
+
+16. Reality Check
+    Minimal bold text
+
+17. Final Challenge
+    Strong CTA design
+
+18. Thank You
+    Clean closing
+
+---
+
+GOAL:
+
+The presentation should feel like a real LinkedIn product experience, not just slides.
+
+Students should visually understand how LinkedIn works without needing explanation.
