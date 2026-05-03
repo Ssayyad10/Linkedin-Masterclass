@@ -51,11 +51,9 @@ export default function Slide09Headline() {
             <div style={{ height: "7vh", background: "linear-gradient(135deg, #0A66C2, #004182)" }} />
             <div style={{ padding: "0 1.8vw 1.8vw" }}>
               <div style={{ marginTop: "-3.5vh", marginBottom: "1vh" }}>
-                <div style={{ width: "6.5vh", height: "6.5vh", borderRadius: "50%", background: "linear-gradient(135deg, #DBEAFE, #93C5FD)", border: "0.3vh solid #fff", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <svg width="45%" height="45%" viewBox="0 0 24 24" fill="#3B82F6"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
-                </div>
+                <img src="https://i.pravatar.cc/150?img=12" alt="Sohel Sayyad" style={{ width: "6.5vh", height: "6.5vh", borderRadius: "50%", objectFit: "cover", border: "0.3vh solid #fff", display: "block" }} />
               </div>
-              <div style={{ fontSize: "1.4vw", fontWeight: 700, color: "#111111" }}>Rahul Sharma</div>
+              <div style={{ fontSize: "1.4vw", fontWeight: 700, color: "#111111" }}>Sohel Sayyad</div>
 
               {/* Highlighted headline */}
               <div style={{ marginTop: "1vh", padding: "0.8vh 1vw", borderRadius: "0.5vw", background: "rgba(10,102,194,0.07)", border: "1.5px solid rgba(10,102,194,0.3)" }}>
@@ -63,7 +61,7 @@ export default function Slide09Headline() {
                 <div style={{ fontSize: "1.1vw", fontWeight: 600, color: "#0A66C2" }}>CSE Student | Passionate about Web Dev | Open to Internships</div>
               </div>
 
-              <div style={{ fontSize: "1vw", color: "#666", marginTop: "0.6vh" }}>NIT Raipur · Raipur, Chhattisgarh, India</div>
+              <div style={{ fontSize: "1vw", color: "#666", marginTop: "0.6vh" }}>DBATU · Lonere, Maharashtra, India</div>
             </div>
           </div>
 

@@ -77,7 +77,7 @@ export default function Slide16Message() {
                   Hello Sir,
                 </div>
                 <div style={{ fontSize: "1.1vw", lineHeight: 1.55, marginTop: "0.5vh" }}>
-                  I am Rahul, a first-year CSE student at NIT Raipur. I came across your profile and was really inspired by your journey.
+                  I am Sohel, a first-year CSE student at DBATU (Dr. Babasaheb Ambedkar Technological University). I came across your profile and was really inspired by your journey.
                 </div>
                 <div style={{ fontSize: "1.1vw", lineHeight: 1.55, marginTop: "0.5vh" }}>
                   I would love to learn how you prepared for your first internship. Any one tip would be really helpful.
@@ -98,7 +98,7 @@ export default function Slide16Message() {
                 }}
               >
                 <div style={{ fontSize: "1.1vw", lineHeight: 1.55, color: "#111" }}>
-                  Hi Rahul! Great to hear from you. My one tip: start with DSA early. LeetCode easy problems every day. Good luck!
+                  Hi Sohel! Great to hear from you. My one tip: start with DSA early. LeetCode easy problems every day. Good luck!
                 </div>
                 <div style={{ fontSize: "0.9vw", color: "#9CA3AF", marginTop: "0.5vh" }}>12:58 PM</div>
               </div>

@@ -45,7 +45,7 @@ export default function Slide14Networking() {
           <div style={{ background: "#fff", borderRadius: "1.2vw", border: "1px solid #E5E7EB", overflow: "hidden", boxShadow: "0 0.5vh 2vh rgba(0,0,0,0.07)" }}>
             <div style={{ padding: "1.5vh 2vw", borderBottom: "1px solid #E5E7EB" }}>
               <div style={{ fontSize: "1.4vw", fontWeight: 700, color: "#111111" }}>People you may know</div>
-              <div style={{ fontSize: "1vw", color: "#666", marginTop: "0.2vh" }}>From NIT Raipur · Computer Science</div>
+              <div style={{ fontSize: "1vw", color: "#666", marginTop: "0.2vh" }}>From DBATU · Computer Science</div>
             </div>
 
             {/* Person 1 */}
@@ -55,7 +55,7 @@ export default function Slide14Networking() {
               </div>
               <div style={{ flex: 1 }}>
                 <div style={{ fontSize: "1.2vw", fontWeight: 700, color: "#111111" }}>Ananya Singh</div>
-                <div style={{ fontSize: "1vw", color: "#666666" }}>CSE · 3rd year · NIT Raipur</div>
+                <div style={{ fontSize: "1vw", color: "#666666" }}>CSE · 3rd year · DBATU</div>
                 <div style={{ fontSize: "0.95vw", color: "#9CA3AF" }}>12 mutual connections</div>
               </div>
               <div style={{ padding: "0.6vh 1.2vw", borderRadius: "100px", border: "1.5px solid #0A66C2", fontSize: "1.1vw", fontWeight: 700, color: "#0A66C2", flexShrink: 0 }}>Connect</div>

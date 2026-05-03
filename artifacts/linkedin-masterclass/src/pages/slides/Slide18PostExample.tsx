@@ -47,12 +47,10 @@ export default function Slide18PostExample() {
         >
           {/* Post header */}
           <div style={{ padding: "1.8vh 2vw", display: "flex", alignItems: "flex-start", gap: "1vw" }}>
-            <div style={{ width: "5.5vh", height: "5.5vh", borderRadius: "50%", background: "linear-gradient(135deg, #0A66C2, #004182)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-              <span style={{ color: "#fff", fontWeight: 700, fontSize: "2.2vh" }}>R</span>
-            </div>
+            <img src="https://i.pravatar.cc/150?img=12" alt="Sohel Sayyad" style={{ width: "5.5vh", height: "5.5vh", borderRadius: "50%", objectFit: "cover", flexShrink: 0 }} />
             <div style={{ flex: 1 }}>
-              <div style={{ fontSize: "1.2vw", fontWeight: 700, color: "#111111" }}>Rahul Sharma</div>
-              <div style={{ fontSize: "1vw", color: "#666666" }}>CSE Student | Web Dev | Open to Internships</div>
+              <div style={{ fontSize: "1.2vw", fontWeight: 700, color: "#111111" }}>Sohel Sayyad</div>
+              <div style={{ fontSize: "1vw", color: "#666666" }}>B.Tech CSE Student | DBATU | Open to Internships</div>
               <div style={{ fontSize: "0.9vw", color: "#9CA3AF", marginTop: "0.2vh" }}>3 hours ago · Public</div>
             </div>
             <div style={{ padding: "0.5vh 1vw", borderRadius: "100px", border: "1.5px solid #0A66C2", fontSize: "1vw", fontWeight: 600, color: "#0A66C2", flexShrink: 0 }}>+ Follow</div>

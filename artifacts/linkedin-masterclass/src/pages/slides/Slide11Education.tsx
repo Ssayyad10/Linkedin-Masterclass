@@ -69,8 +69,9 @@ export default function Slide11Education() {
                 <svg width="60%" height="60%" viewBox="0 0 24 24" fill="none" stroke="#0A66C2" strokeWidth="1.5" strokeLinecap="round"><path d="M12 3L2 9l10 6 10-6-10-6z"/><path d="M2 9v6c0 3.31 4.48 6 10 6s10-2.69 10-6V9"/></svg>
               </div>
               <div style={{ flex: 1 }}>
-                <div style={{ fontSize: "1.3vw", fontWeight: 700, color: "#111111" }}>NIT Raipur</div>
-                <div style={{ fontSize: "1.1vw", color: "#666666", marginTop: "0.3vh" }}>Bachelor of Technology · Computer Science</div>
+                <div style={{ fontSize: "1.3vw", fontWeight: 700, color: "#111111" }}>Dr. Babasaheb Ambedkar Technological University</div>
+                <div style={{ fontSize: "1vw", color: "#9CA3AF", marginTop: "0.1vh" }}>Lonere, Raigad, Maharashtra</div>
+                <div style={{ fontSize: "1.1vw", color: "#666666", marginTop: "0.3vh" }}>Bachelor of Technology · Computer Science & Engineering</div>
                 <div style={{ fontSize: "1vw", color: "#9CA3AF", marginTop: "0.3vh" }}>Aug 2024 – May 2028</div>
                 <div style={{ fontSize: "1vw", color: "#666666", marginTop: "0.5vh" }}>Activities: Coding Club, Hackathons</div>
               </div>

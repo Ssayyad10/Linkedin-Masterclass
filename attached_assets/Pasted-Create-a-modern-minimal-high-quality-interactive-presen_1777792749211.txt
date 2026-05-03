@@ -1,0 +1,173 @@
+Create a modern, minimal, high-quality interactive presentation using HTML, CSS, and JavaScript.
+
+GOAL:
+This should feel like a real LinkedIn product walkthrough, not a traditional slide deck.
+
+TARGET:
+First-year engineering students (beginner-friendly, simple language)
+
+---
+
+DESIGN SYSTEM:
+
+- Background: #FFFFFF
+- Primary: #0A66C2 (LinkedIn blue)
+- Text: #111111 / #666666
+- Cards: #F7F9FB
+- Border radius: 16px
+- Shadow: soft (0 10px 30px rgba(0,0,0,0.08))
+
+Typography:
+- Clean sans-serif (Inter / system-ui)
+- Large headings, minimal text
+
+Layout:
+- Fullscreen sections (100vh per slide)
+- 2-column layout:
+  Left: text (40%)
+  Right: UI/mockup (60%)
+
+Spacing:
+- Generous padding (80px)
+- Strong alignment and whitespace
+
+---
+
+INTERACTION & ANIMATION (VERY IMPORTANT):
+
+- Smooth vertical slide transitions
+- Use CSS + JS (no heavy libraries required)
+- Animations:
+  - Fade-up (opacity + translateY)
+  - Slide-in (left/right)
+  - Staggered delays (cards appearing one by one)
+
+- Trigger animations on scroll (Intersection Observer)
+
+- Add subtle hover effects:
+  - Buttons scale slightly
+  - Cards lift (translateY -4px)
+
+- No flashy or distracting animations
+
+---
+
+SLIDE SYSTEM:
+
+Each slide = <section class="slide">
+
+Include navigation:
+- Scroll-based OR arrow key navigation
+- Optional progress indicator (right side dots)
+
+---
+
+CONTENT STRUCTURE (FOLLOW EXACTLY):
+
+Slides:
+1. Title
+2. Hook
+3. Why LinkedIn
+4. Download App
+5. Create Account
+6. Instagram vs LinkedIn
+7. Profile Photo
+8. Live Action
+9. Headline (brief)
+10. Skip About
+11. Education (DBATU)
+12. Skills
+13. Certificates
+14. Networking
+15. Send Requests
+16. Message Example
+17. What to Post
+18. Post Example
+19. What Not to Do
+20. Weekly Plan
+21. Today’s Task
+22. Reality Check
+23. Final CTA
+24. Thank You
+
+---
+
+UI MOCKUPS (CRITICAL):
+
+Build realistic LinkedIn-style components using HTML/CSS:
+
+1. Profile Card:
+- Profile image (same person everywhere)
+- Name: Sohel Sayyad
+- Headline
+- Connect button
+- Location: India
+
+2. Education Card:
+- Logo (DBATU style)
+- Text:
+  Dr. Babasaheb Ambedkar Technological University, Lonere, Raigad
+  B.Tech – First Year
+
+3. Skills Card:
+- Tag-style skills (rounded pills)
+
+4. Chat UI:
+- Left/right message bubbles
+- Profile image consistent
+
+5. Post UI:
+- Profile row
+- Post text
+- Like/comment icons
+
+6. Connect UI:
+- Profile + “Connect” button
+
+IMPORTANT:
+- Use ONE consistent profile image across ALL components
+- Do NOT use random images
+- Use a single placeholder image URL consistently
+
+---
+
+IMAGE STRATEGY:
+
+- Use ONE placeholder image:
+  e.g. https://i.pravatar.cc/150?img=12
+- Reuse it everywhere (profile, chat, posts)
+
+- Avoid stock photos
+- Avoid multiple different faces
+
+---
+
+COMPONENT STYLE:
+
+- Clean, minimal, LinkedIn-like
+- White cards with soft shadows
+- Proper spacing and alignment
+- No fake or broken UI
+
+---
+
+TECH IMPLEMENTATION:
+
+Use:
+- HTML5 semantic structure
+- CSS (Flexbox/Grid)
+- Vanilla JS
+
+Optional:
+- IntersectionObserver for animations
+- Smooth scroll behavior
+
+---
+
+FINAL REQUIREMENT:
+
+- Code should be clean and modular
+- Each slide clearly separated
+- UI should feel like a real app demo
+- No clutter, no broken layouts
+- Fully responsive (desktop priority, mobile adaptive)
