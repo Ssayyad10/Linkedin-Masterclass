@@ -1,0 +1,31 @@
+kind = "slides"
+previewPath = "/linkedin-masterclass/"
+title = "LinkedIn Masterclass"
+version = "1.0.0"
+id = "artifacts/linkedin-masterclass"
+router = "path"
+
+[[integratedSkills]]
+name = "slides"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/linkedin-masterclass/" ]
+localPort = 23929
+
+[services.development]
+run = "pnpm --filter @workspace/linkedin-masterclass run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/linkedin-masterclass", "run", "build" ]
+publicDir = "artifacts/linkedin-masterclass/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23929"
+BASE_PATH = "/linkedin-masterclass/"
