@@ -47,6 +47,16 @@ body {
   overflow: hidden;
   scroll-snap-align: start;
   position: relative;
+  opacity: 0;
+  transform: translateY(28px);
+  will-change: transform, opacity;
+  transition: opacity 0.72s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.72s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.slide.is-entered {
+  opacity: 1;
+  transform: none;
 }
 
 .slide-viewer {

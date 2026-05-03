@@ -218,29 +218,35 @@ function SlideShell() {
   const slideCount = slides.length;
   const progress = useMemo(() => slides.map((slide) => slide.position), []);
 
+  // Seed first slide as immediately visible (no flicker on load)
+  useEffect(() => {
+    const first = sectionRefs.current[0];
+    if (first) first.classList.add("is-entered");
+  }, []);
+
   useEffect(() => {
     const root = scrollRef.current;
-    const sections = sectionRefs.current.filter(Boolean);
+    const sections = sectionRefs.current.filter(Boolean) as HTMLDivElement[];
     if (!root || sections.length === 0) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
+        // Pick the entry with the highest intersection ratio
+        const best = entries
+          .filter((e) => e.isIntersecting)
           .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (!visible) return;
-        const index = Number((visible.target as HTMLElement).dataset.index ?? "0");
+        if (!best) return;
+
+        const slideEl = best.target as HTMLDivElement;
+        const index = Number(slideEl.dataset.index ?? "0");
         setActiveIndex(index);
-        const targets = (visible.target as HTMLElement).querySelectorAll<HTMLElement>(
-          ".fade-up, .slide-left, .slide-right, .scale-in, [data-stagger-item]",
-        );
-        targets.forEach((target, itemIndex) => {
-          const delay = target.dataset.staggerItem ? `${itemIndex * 100}ms` : target.dataset.delay ?? "0ms";
-          target.style.transitionDelay = delay;
-          target.classList.add("is-visible");
-        });
+
+        // Mark this slide (and all previous ones) as entered so they stay visible
+        for (let i = 0; i <= index; i++) {
+          sectionRefs.current[i]?.classList.add("is-entered");
+        }
       },
-      { root, threshold: [0.35, 0.55, 0.75] },
+      { root, threshold: [0.2, 0.5, 0.8] },
     );
 
     sections.forEach((section) => observer.observe(section));
