@@ -105,6 +105,12 @@ body {
   transform: scale(1.35);
 }
 
+@media (max-width: 1023px), (orientation: portrait) {
+  .slide-shell {
+    display: none;
+  }
+}
+
 .fade-up,
 .slide-left,
 .slide-right,
