@@ -10,12 +10,12 @@ const app: Express = express();
 // ✅ FIXED PATH
 const frontendPath = path.resolve("artifacts/linkedin-masterclass/dist");
 
-app.use(express.static(frontendPath));
+// ✅ correct
+app.use(express.static(path.join(frontendPath, "public")));
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(frontendPath, "index.html"));
+  res.sendFile(path.join(frontendPath, "public/index.html"));
 });
-
 // Logging
 app.use(
   pinoHttp({
