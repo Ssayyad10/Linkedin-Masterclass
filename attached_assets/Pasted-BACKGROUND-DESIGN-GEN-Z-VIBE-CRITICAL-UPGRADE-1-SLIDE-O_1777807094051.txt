@@ -1,0 +1,118 @@
+BACKGROUND DESIGN + GEN Z VIBE (CRITICAL UPGRADE):
+
+1. SLIDE ORIENTATION (STRICT):
+
+* ALL slides must be LANDSCAPE (16:9 ratio)
+* Optimized for projector / desktop viewing
+* No mobile-first layouts
+* No vertical/portrait compositions
+
+---
+
+2. BACKGROUND SYSTEM (NOT PLAIN WHITE):
+
+Do NOT use empty white backgrounds.
+
+Instead, use subtle, animated background elements:
+
+* Soft gradient overlays (white → very light blue tint)
+* Abstract shapes (circles, blobs, lines)
+* Floating UI fragments (LinkedIn-style cards blurred in background)
+* Light grid or dot patterns (very subtle)
+
+Color usage:
+
+* Keep mostly white
+* Add hints of #0A66C2 (very soft, low opacity)
+* Occasional neutral gradients
+
+---
+
+3. ANIMATED BACKGROUND ELEMENTS:
+
+Add slow, subtle motion:
+
+* Floating shapes (move slightly up/down)
+* Parallax layers (background moves slower than content)
+* Soft glowing elements
+* Animated gradient shift (very slow)
+
+Animation rules:
+
+* Duration: 6–12 seconds (loop)
+* Very subtle (no distraction)
+* Low opacity
+
+---
+
+4. GEN Z VISUAL STYLE (IMPORTANT):
+
+Tone should feel:
+
+* Modern
+* Slightly playful
+* Clean but not boring
+
+Add:
+
+* Rounded blobs
+* Soft glow accents
+* Thin lines / connectors
+* Micro UI stickers (like “+ Connect”, “Like”, etc.)
+
+BUT:
+
+* Avoid clutter
+* Avoid meme style
+* Avoid loud neon
+
+---
+
+5. DEPTH & LAYERS:
+
+Each slide should have 3 layers:
+
+* Background (animated shapes)
+* Mid layer (soft UI or pattern)
+* Foreground (main content)
+
+Use blur + opacity to create depth.
+
+---
+
+6. CARD STYLING UPGRADE:
+
+* Slight glassmorphism (optional):
+  backdrop-filter: blur(10px)
+* Soft borders
+* Floating effect
+
+---
+
+7. CONSISTENCY:
+
+* Background style must feel connected across slides
+* Slight variation per slide, but same design language
+* Do NOT randomly change themes
+
+---
+
+8. DO NOT:
+
+* Do NOT keep plain white empty slides
+* Do NOT add heavy gradients or dark themes
+* Do NOT distract from content
+* Do NOT over-animate
+
+---
+
+FINAL RESULT:
+
+Slides should feel:
+
+* Alive (subtle motion)
+* Modern Gen Z
+* Premium but not corporate
+* Clean but not boring
+
+The background should enhance the experience, not compete with content.
