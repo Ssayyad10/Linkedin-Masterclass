@@ -13,9 +13,9 @@
 :root {
   --slide-primary: #0A66C2;
   --slide-accent: #0A66C2;
-  --slide-bg: #F0F4F8;
-  --slide-text: #1B1B1B;
-  --slide-muted: #6B7280;
+  --slide-bg: #FFFFFF;
+  --slide-text: #111111;
+  --slide-muted: #666666;
   --font-display-family: "Plus Jakarta Sans", system-ui, sans-serif;
   --font-body-family: "Plus Jakarta Sans", system-ui, sans-serif;
   color-scheme: light;

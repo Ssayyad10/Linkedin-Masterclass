@@ -2,188 +2,139 @@ export default function Slide01Title() {
   return (
     <div
       className="w-screen h-screen overflow-hidden relative flex"
-      style={{ background: "linear-gradient(135deg, #F0F4F8 0%, #EBF3FB 100%)", fontFamily: "'Plus Jakarta Sans', sans-serif" }}
+      style={{ background: "#FFFFFF", fontFamily: "'Plus Jakarta Sans', sans-serif" }}
     >
-      {/* Left accent bar */}
-      <div className="absolute left-0 top-0 bottom-0 w-[0.4vw]" style={{ background: "#0A66C2" }} />
-
-      {/* Background subtle shape */}
-      <div
-        className="absolute"
-        style={{
-          right: "-8vw",
-          bottom: "-10vh",
-          width: "55vw",
-          height: "55vw",
-          borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(10,102,194,0.06) 0%, rgba(10,102,194,0) 70%)",
-          pointerEvents: "none",
-        }}
-      />
+      {/* Left blue accent bar */}
+      <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: "0.35vw", background: "#0A66C2" }} />
 
       {/* Left column */}
-      <div className="flex flex-col justify-center pl-[7vw] pr-[3vw]" style={{ width: "52%", zIndex: 1 }}>
+      <div
+        className="flex flex-col justify-center"
+        style={{ width: "48%", paddingLeft: "7vw", paddingRight: "3vw", paddingTop: "5vh", paddingBottom: "5vh" }}
+      >
         {/* LinkedIn badge */}
-        <div className="flex items-center gap-[0.8vw] mb-[2.5vh]">
+        <div className="flex items-center gap-[0.7vw]" style={{ marginBottom: "3vh" }}>
           <div
-            className="flex items-center justify-center rounded-[0.4vw]"
-            style={{ width: "2.8vw", height: "2.8vw", background: "#0A66C2" }}
+            style={{
+              width: "2.6vw",
+              height: "2.6vw",
+              background: "#0A66C2",
+              borderRadius: "0.4vw",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
           >
-            <span style={{ color: "#fff", fontWeight: 800, fontSize: "1.6vw", letterSpacing: "-0.02em", lineHeight: 1 }}>in</span>
+            <span style={{ color: "#fff", fontWeight: 800, fontSize: "1.5vw", lineHeight: 1 }}>in</span>
           </div>
-          <span style={{ color: "#0A66C2", fontWeight: 700, fontSize: "1.1vw", letterSpacing: "0.12em", textTransform: "uppercase" }}>
+          <span style={{ color: "#0A66C2", fontWeight: 700, fontSize: "1vw", letterSpacing: "0.12em", textTransform: "uppercase" }}>
             LinkedIn Masterclass
           </span>
         </div>
 
         {/* Main headline */}
-        <div style={{ fontSize: "5.6vw", fontWeight: 800, lineHeight: 1.05, color: "#1B1B1B", letterSpacing: "-0.03em", textWrap: "balance" }}>
+        <div style={{ fontSize: "5vw", fontWeight: 800, color: "#111111", lineHeight: 1.05, letterSpacing: "-0.03em" }}>
           Build Your
           <br />
-          <span style={{ color: "#0A66C2" }}>Professional</span>
+          <span style={{ color: "#0A66C2" }}>Career</span>
           <br />
-          Presence
+          From Day 1
         </div>
 
         {/* Divider */}
-        <div className="my-[2.5vh]" style={{ width: "5vw", height: "0.35vh", background: "#0A66C2", borderRadius: "2px" }} />
+        <div style={{ width: "4vw", height: "0.3vh", background: "#0A66C2", borderRadius: "2px", margin: "2.5vh 0" }} />
 
-        {/* Sub text */}
-        <div style={{ fontSize: "1.7vw", fontWeight: 400, color: "#4B5563", lineHeight: 1.55, textWrap: "pretty" }}>
-          For first-year engineering students
-          <br />
-          from every background.
+        {/* Subtitle */}
+        <div style={{ fontSize: "1.6vw", fontWeight: 400, color: "#666666", lineHeight: 1.55 }}>
+          For First-Year Engineering Students
         </div>
 
-        {/* Tag row */}
-        <div className="flex gap-[1vw] mt-[3vh]">
-          <div
-            style={{
-              padding: "0.6vh 1.2vw",
-              borderRadius: "100px",
-              background: "rgba(10,102,194,0.08)",
-              color: "#0A66C2",
-              fontSize: "1.2vw",
-              fontWeight: 600,
-            }}
-          >
-            Free
-          </div>
-          <div
-            style={{
-              padding: "0.6vh 1.2vw",
-              borderRadius: "100px",
-              background: "rgba(10,102,194,0.08)",
-              color: "#0A66C2",
-              fontSize: "1.2vw",
-              fontWeight: 600,
-            }}
-          >
-            Beginner Friendly
-          </div>
-          <div
-            style={{
-              padding: "0.6vh 1.2vw",
-              borderRadius: "100px",
-              background: "rgba(10,102,194,0.08)",
-              color: "#0A66C2",
-              fontSize: "1.2vw",
-              fontWeight: 600,
-            }}
-          >
-            Career Starter
-          </div>
+        {/* Tags */}
+        <div className="flex gap-[0.8vw]" style={{ marginTop: "3vh" }}>
+          <div style={{ padding: "0.5vh 1.1vw", borderRadius: "100px", background: "#F7F9FB", border: "1px solid #E5E7EB", fontSize: "1.1vw", fontWeight: 600, color: "#0A66C2" }}>Free</div>
+          <div style={{ padding: "0.5vh 1.1vw", borderRadius: "100px", background: "#F7F9FB", border: "1px solid #E5E7EB", fontSize: "1.1vw", fontWeight: 600, color: "#0A66C2" }}>Beginner Friendly</div>
+          <div style={{ padding: "0.5vh 1.1vw", borderRadius: "100px", background: "#F7F9FB", border: "1px solid #E5E7EB", fontSize: "1.1vw", fontWeight: 600, color: "#0A66C2" }}>Action-Oriented</div>
         </div>
       </div>
 
-      {/* Right column — LinkedIn Profile Card Mockup */}
-      <div className="flex items-center justify-center" style={{ width: "48%", zIndex: 1 }}>
+      {/* Right column — laptop visual */}
+      <div
+        className="flex items-center justify-center"
+        style={{ width: "52%", paddingRight: "5vw", paddingTop: "5vh", paddingBottom: "5vh" }}
+      >
+        {/* Student + laptop visual card */}
         <div
           style={{
-            width: "28vw",
-            borderRadius: "1.2vw",
-            background: "#fff",
-            boxShadow: "0 2vh 5vh rgba(0,0,0,0.12)",
+            width: "36vw",
+            height: "72vh",
+            borderRadius: "1.5vw",
+            background: "linear-gradient(145deg, #E8F1FB 0%, #D0E4F7 40%, #B8D4F0 100%)",
+            position: "relative",
             overflow: "hidden",
+            boxShadow: "0 2vh 5vh rgba(10,102,194,0.12)",
           }}
         >
-          {/* Banner */}
+          {/* Decorative circles */}
+          <div style={{ position: "absolute", top: "-5vh", right: "-5vw", width: "20vw", height: "20vw", borderRadius: "50%", background: "rgba(10,102,194,0.08)" }} />
+          <div style={{ position: "absolute", bottom: "-3vh", left: "-3vw", width: "14vw", height: "14vw", borderRadius: "50%", background: "rgba(10,102,194,0.06)" }} />
+
+          {/* Laptop SVG */}
+          <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}>
+            <svg width="22vw" height="16vh" viewBox="0 0 320 200" fill="none">
+              {/* Screen */}
+              <rect x="40" y="10" width="240" height="155" rx="8" fill="#1B2A3A" />
+              <rect x="48" y="18" width="224" height="139" rx="4" fill="#0A66C2" opacity="0.85" />
+              {/* LinkedIn UI on screen */}
+              <rect x="56" y="26" width="80" height="10" rx="3" fill="rgba(255,255,255,0.3)" />
+              <rect x="56" y="44" width="60" height="8" rx="3" fill="rgba(255,255,255,0.5)" />
+              <rect x="56" y="58" width="100" height="6" rx="3" fill="rgba(255,255,255,0.2)" />
+              <rect x="56" y="70" width="100" height="6" rx="3" fill="rgba(255,255,255,0.2)" />
+              <circle cx="228" cy="60" r="28" fill="rgba(255,255,255,0.15)" />
+              <circle cx="228" cy="52" r="10" fill="rgba(255,255,255,0.4)" />
+              <rect x="210" y="68" width="36" height="8" rx="4" fill="rgba(255,255,255,0.3)" />
+              {/* Base */}
+              <path d="M20 168 L40 165 L280 165 L300 168 L320 185 H0 Z" fill="#CBD5E1" />
+              <rect x="140" y="165" width="40" height="4" rx="2" fill="#94A3B8" />
+            </svg>
+          </div>
+
+          {/* Top-right badge */}
           <div
             style={{
-              height: "8vh",
-              background: "linear-gradient(135deg, #0A66C2 0%, #0073B1 60%, #005885 100%)",
+              position: "absolute",
+              top: "3vh",
+              right: "2vw",
+              background: "#0A66C2",
+              borderRadius: "0.8vw",
+              padding: "0.8vh 1.2vw",
             }}
-          />
+          >
+            <div style={{ color: "#fff", fontSize: "1vw", fontWeight: 700 }}>Start Today</div>
+          </div>
 
-          {/* Avatar + info */}
-          <div style={{ padding: "0 1.8vw 1.8vw" }}>
-            {/* Avatar circle — overlaps banner */}
-            <div style={{ marginTop: "-4vh", marginBottom: "1.2vh" }}>
-              <div
-                style={{
-                  width: "7.5vh",
-                  height: "7.5vh",
-                  borderRadius: "50%",
-                  background: "linear-gradient(135deg, #cbd5e1 0%, #94a3b8 100%)",
-                  border: "0.3vh solid #fff",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <svg width="45%" height="45%" viewBox="0 0 24 24" fill="#6B7280">
-                  <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
-                </svg>
-              </div>
+          {/* Bottom stat */}
+          <div
+            style={{
+              position: "absolute",
+              bottom: "3vh",
+              left: "2vw",
+              right: "2vw",
+              background: "rgba(255,255,255,0.9)",
+              borderRadius: "1vw",
+              padding: "1.2vh 1.5vw",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <div>
+              <div style={{ fontSize: "1.8vw", fontWeight: 800, color: "#0A66C2" }}>1B+</div>
+              <div style={{ fontSize: "1vw", color: "#666", marginTop: "0.2vh" }}>professionals waiting</div>
             </div>
-
-            {/* Name */}
-            <div style={{ fontSize: "1.5vw", fontWeight: 700, color: "#1B1B1B", lineHeight: 1.2 }}>
-              Priya Sharma
-            </div>
-            {/* Headline */}
-            <div style={{ fontSize: "1.1vw", fontWeight: 400, color: "#4B5563", marginTop: "0.4vh", lineHeight: 1.4 }}>
-              CSE Student at NIT Raipur · Passionate about Web Dev · Open to Internships
-            </div>
-            {/* Location */}
-            <div style={{ fontSize: "1vw", color: "#6B7280", marginTop: "0.4vh" }}>
-              Raipur, Chhattisgarh, India
-            </div>
-
-            {/* Divider */}
-            <div style={{ height: "1px", background: "#E5E7EB", margin: "1.4vh 0" }} />
-
-            {/* Stats row */}
-            <div className="flex gap-[1.5vw]">
-              <div>
-                <div style={{ fontSize: "1.2vw", fontWeight: 700, color: "#0A66C2" }}>247</div>
-                <div style={{ fontSize: "0.95vw", color: "#6B7280" }}>Connections</div>
-              </div>
-              <div>
-                <div style={{ fontSize: "1.2vw", fontWeight: 700, color: "#0A66C2" }}>1,840</div>
-                <div style={{ fontSize: "0.95vw", color: "#6B7280" }}>Profile views</div>
-              </div>
-              <div>
-                <div style={{ fontSize: "1.2vw", fontWeight: 700, color: "#0A66C2" }}>12</div>
-                <div style={{ fontSize: "0.95vw", color: "#6B7280" }}>Post impressions</div>
-              </div>
-            </div>
-
-            {/* Divider */}
-            <div style={{ height: "1px", background: "#E5E7EB", margin: "1.4vh 0" }} />
-
-            {/* Open to work badge */}
-            <div
-              className="flex items-center gap-[0.6vw]"
-              style={{
-                padding: "0.7vh 1vw",
-                borderRadius: "0.6vw",
-                background: "rgba(10,102,194,0.07)",
-                border: "1px solid rgba(10,102,194,0.15)",
-              }}
-            >
-              <div style={{ width: "0.8vw", height: "0.8vw", borderRadius: "50%", background: "#0A66C2" }} />
-              <span style={{ fontSize: "1vw", fontWeight: 600, color: "#0A66C2" }}>Open to Work</span>
+            <div style={{ width: "1px", height: "4vh", background: "#E5E7EB" }} />
+            <div>
+              <div style={{ fontSize: "1.8vw", fontWeight: 800, color: "#0A66C2" }}>Year 1</div>
+              <div style={{ fontSize: "1vw", color: "#666", marginTop: "0.2vh" }}>the right time to start</div>
             </div>
           </div>
         </div>

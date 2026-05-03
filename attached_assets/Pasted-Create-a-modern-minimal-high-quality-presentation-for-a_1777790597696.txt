@@ -1,0 +1,282 @@
+Create a modern, minimal, high-quality presentation for a LinkedIn masterclass aimed at first-year engineering students from rural backgrounds.
+
+STYLE DIRECTION (VERY IMPORTANT):
+- Clean, premium Gen Z aesthetic (Jency style)
+- Minimal, calm, and structured (not flashy)
+- Feels like a real product presentation (LinkedIn-like UI)
+- High whitespace, soft hierarchy, no clutter
+
+COLOR SYSTEM:
+- Background: Pure white (#FFFFFF)
+- Primary accent: LinkedIn blue (#0A66C2)
+- Text: #111111 (primary), #666666 (secondary)
+- Cards: #F7F9FB
+
+TYPOGRAPHY:
+- Headings: Bold, modern sans-serif
+- Body: Clean, readable sans-serif
+- Large headings (48–64pt feel), minimal text
+
+LAYOUT SYSTEM:
+- 2-column grid: Left (text 40%) / Right (visual 60%)
+- Consistent margins and spacing
+- Rounded cards (16px radius)
+- Soft shadows (subtle, premium)
+- Use icons where needed (thin outline style)
+
+ANIMATION STYLE:
+- Smooth fade and slide transitions
+- No flashy or distracting motion
+
+---
+
+CRITICAL REQUIREMENT (DO NOT MISS):
+Automatically generate realistic UI mockups throughout the slides.
+
+INCLUDE:
+- LinkedIn mobile app install screen
+- LinkedIn signup screen
+- LinkedIn profile page
+- Profile photo examples (good vs bad)
+- Education section UI
+- Skills section UI
+- Certificate section UI
+- Connection button / networking UI
+- LinkedIn chat/message UI
+- LinkedIn post UI (full post card)
+- Before vs after profile comparison (optional)
+
+MOCKUP RULES:
+- Must look realistic and modern
+- Match LinkedIn design language (white + blue)
+- Placed on right side or as clean cards
+- No stock clutter or generic illustrations
+
+---
+
+CONTENT RULES:
+- Max 3–4 bullet points per slide
+- Keep text extremely simple and beginner-friendly
+- Avoid technical jargon
+- Focus on clarity + action
+
+---
+
+SLIDE STRUCTURE (EXACT — DO NOT CHANGE ORDER):
+
+1. TITLE SLIDE  
+Text:
+LinkedIn Masterclass  
+Build Your Career From Day 1  
+For First-Year Engineering Students  
+Visual: student using laptop (simple environment, soft overlay)
+
+---
+
+2. HOOK  
+Text:
+Most students start LinkedIn in final year.  
+You’re starting in first year.
+
+---
+
+3. WHY LINKEDIN  
+Text:
+Not just social media  
+Your career identity  
+Opportunities come to you  
+People discover you  
+Visual: LinkedIn dashboard-style UI card
+
+---
+
+4. DOWNLOAD LINKEDIN  
+Text:
+Step 1: Download LinkedIn  
+Search on Play Store / App Store  
+Install the app  
+Visual: app store screen mockup
+
+---
+
+5. CREATE ACCOUNT  
+Text:
+Step 2: Create your account  
+Enter your name  
+Add email / phone  
+Create password  
+Visual: LinkedIn signup UI
+
+---
+
+6. INSTAGRAM VS LINKEDIN  
+Text:
+Instagram: entertainment, followers  
+LinkedIn: network, opportunities  
+Visual: split screen UI comparison
+
+---
+
+7. PROFILE PHOTO  
+Text:
+Clear face  
+Simple background  
+Good lighting  
+Add: Open profile → Upload photo  
+Visual: good vs bad photo comparison
+
+---
+
+8. LIVE ACTION  
+Text:
+Take 2 minutes now  
+Upload your profile photo
+
+---
+
+9. HEADLINE (BRIEF)  
+Text:
+LinkedIn adds a headline automatically  
+We’ll improve it later  
+Visual: profile UI highlight
+
+---
+
+10. SKIP ABOUT  
+Text:
+You can skip this for now  
+Focus on completing profile
+
+---
+
+11. ADD EDUCATION  
+Text:
+Step 3: Add Education  
+College name  
+Degree  
+Year  
+Visual: education section UI
+
+---
+
+12. ADD SKILLS  
+Text:
+Step 4: Add Skills  
+Add 3–5 basic skills  
+Start simple  
+Visual: skills UI
+
+---
+
+13. ADD CERTIFICATES  
+Text:
+Step 5: Add Certificates  
+Online courses  
+Workshops  
+Visual: certificate UI
+
+---
+
+14. NETWORKING  
+Text:
+Connect with seniors  
+Connect with classmates  
+Tap “Connect”  
+Visual: connection UI
+
+---
+
+15. SEND REQUESTS  
+Text:
+Step 6: Send 5 connection requests  
+Start today  
+Visual: suggested connections UI
+
+---
+
+16. MESSAGE EXAMPLE  
+Text:
+Hello Sir,  
+I am a first-year student…  
+I would love to learn from you.  
+Visual: chat UI
+
+---
+
+17. WHAT TO POST  
+Text:
+What you learn  
+Small projects  
+Your journey  
+Questions  
+Visual: post preview cards
+
+---
+
+18. POST EXAMPLE  
+Text:
+Day 1 of learning Python  
+Today I learned variables and loops…  
+Visual: full LinkedIn post UI
+
+---
+
+19. WHAT NOT TO DO  
+Text:
+Don’t copy paste  
+Don’t spam  
+Don’t fake skills  
+Visual: minimal warning icons
+
+---
+
+20. WEEKLY PLAN  
+Text:
+Mon: Learn  
+Wed: Connect  
+Fri: Post  
+Sun: Reflect  
+Visual: timeline UI
+
+---
+
+21. TODAY’S TASK  
+Text:
+Download app  
+Create account  
+Upload photo  
+Add education  
+Add skills  
+Send requests  
+Visual: checklist UI
+
+---
+
+22. REALITY CHECK  
+Text:
+No one will notice you at the start.  
+Keep going anyway.
+
+---
+
+23. FINAL CHALLENGE  
+Text:
+Complete your profile today  
+Send 5 connections  
+Post in 24 hours
+
+---
+
+24. THANK YOU  
+Text:
+Thank You  
+Start now
+
+---
+
+FINAL OUTPUT REQUIREMENT:
+- Slides must feel like a real LinkedIn product experience
+- Strong visual hierarchy
+- Clean spacing and alignment
+- UI mockups should teach without explanation
+- No clutter, no unnecessary elements
