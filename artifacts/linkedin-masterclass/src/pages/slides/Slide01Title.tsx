@@ -6,7 +6,6 @@ export default function Slide01Title() {
     >
       {/* Left blue accent bar */}
       <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: "0.35vw", background: "#0A66C2" }} />
-
       {/* Left column */}
       <div
         className="flex flex-col justify-center"
@@ -45,9 +44,7 @@ export default function Slide01Title() {
         <div style={{ width: "4vw", height: "0.3vh", background: "#0A66C2", borderRadius: "2px", margin: "2.5vh 0" }} />
 
         {/* Subtitle */}
-        <div style={{ fontSize: "1.6vw", fontWeight: 400, color: "#666666", lineHeight: 1.55 }}>
-          For First-Year Engineering Students
-        </div>
+        <div style={{ fontSize: "1.6vw", fontWeight: 400, color: "#666666", lineHeight: 1.55 }}>For  Students</div>
 
         {/* Speaker */}
         <div style={{ marginTop: "2vh", display: "flex", alignItems: "center", gap: "0.6vw" }}>
@@ -62,7 +59,6 @@ export default function Slide01Title() {
           <div style={{ padding: "0.5vh 1.1vw", borderRadius: "100px", background: "#F7F9FB", border: "1px solid #E5E7EB", fontSize: "1.1vw", fontWeight: 600, color: "#0A66C2" }}>Action-Oriented</div>
         </div>
       </div>
-
       {/* Right column — laptop visual */}
       <div
         className="flex items-center justify-center"
