@@ -1,0 +1,68 @@
+STRICT PROFILE UI + SPEAKER CONSISTENCY RULES (DO NOT IGNORE):
+
+1. SPEAKER IDENTITY (GLOBAL CONSISTENCY):
+- Speaker name: Sohel Sayyad
+- Use this name consistently across:
+  - LinkedIn profile mockups
+  - Message examples
+  - Post examples
+- Do NOT change the name anywhere
+- Do NOT generate random names
+
+2. PROFILE PHOTO RULE (CRITICAL):
+- Use ONLY ONE consistent profile person across ALL slides
+- Default: Indian male engineering student (age 17–19)
+- Clean haircut, simple shirt, neutral background
+- No sunglasses, no group photos, no selfies
+- Same face must be reused in:
+  - Profile UI
+  - Post UI
+  - Chat UI
+- NEVER use female images
+- NEVER mix different faces across slides
+
+3. LINKEDIN PROFILE UI ACCURACY (VERY STRICT):
+All LinkedIn profile mockups must follow real structure:
+
+TOP SECTION MUST INCLUDE:
+- Profile photo (left)
+- Name: Sohel Sayyad
+- Headline (auto or simple)
+- Location (India)
+- "Connect" button
+- Clean white card layout
+
+BELOW SECTION:
+- About (optional minimal)
+- Education section (with university)
+- Skills section
+
+Design must:
+- Match real LinkedIn spacing and hierarchy
+- Use white background + blue accents (#0A66C2)
+- Avoid fake layouts or generic cards pretending to be LinkedIn
+
+4. UI QUALITY CONTROL:
+- UI must look like a real product screenshot, not illustration
+- Proper alignment, spacing, and typography
+- No distorted icons
+- No random UI elements
+
+5. NO GENERIC OR BROKEN MOCKUPS:
+- Do NOT create fake UI blocks that don’t resemble LinkedIn
+- Do NOT skip sections (profile, education, skills must appear where relevant)
+- If unsure, simplify but stay accurate
+
+6. MESSAGE & POST CONSISTENCY:
+- Profile image in chat/post must match the same person
+- Name must always be Sohel Sayyad
+- Content must feel realistic (student-level)
+
+7. FINAL VALIDATION BEFORE OUTPUT:
+- Same face used everywhere
+- Same name used everywhere
+- Profile UI matches LinkedIn structure
+- No female/mismatch images
+- No broken or fake UI
+
+If any condition fails, regenerate visuals before final output.
