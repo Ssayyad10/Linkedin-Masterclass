@@ -211,3 +211,252 @@ body {
   transform: translateY(-6px);
   box-shadow: 0 18px 42px rgba(0, 0, 0, 0.12);
 }
+
+/* ===========================================
+   ANIMATED BACKGROUND SYSTEM
+   =========================================== */
+
+@keyframes blob-float-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  30%       { transform: translate(1.8%, 2.8%) scale(1.03); }
+  70%       { transform: translate(-1.2%, 1.2%) scale(0.97); }
+}
+
+@keyframes blob-float-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  40%       { transform: translate(-2.2%, -2%) scale(1.04); }
+  80%       { transform: translate(1.4%, -0.8%) scale(0.98); }
+}
+
+@keyframes blob-float-3 {
+  0%, 100% { transform: translate(0, 0); }
+  50%       { transform: translate(2.4%, 3.2%); }
+}
+
+@keyframes glow-pulse-slow {
+  0%, 100% { opacity: 0.045; }
+  50%       { opacity: 0.09; }
+}
+
+@keyframes line-pulse {
+  0%, 100% { opacity: 0.055; }
+  50%       { opacity: 0.11; }
+}
+
+@keyframes dot-drift {
+  0%   { background-position: 0 0; }
+  100% { background-position: 28px 28px; }
+}
+
+@keyframes ambient-shift {
+  0%, 100% {
+    background:
+      radial-gradient(ellipse 44% 38% at 88% 12%, rgba(10,102,194,0.055) 0%, transparent 100%),
+      radial-gradient(ellipse 32% 28% at 8% 90%, rgba(10,102,194,0.04) 0%, transparent 100%),
+      radial-gradient(ellipse 20% 18% at 52% 50%, rgba(10,102,194,0.022) 0%, transparent 100%);
+  }
+  50% {
+    background:
+      radial-gradient(ellipse 48% 42% at 82% 18%, rgba(10,102,194,0.045) 0%, transparent 100%),
+      radial-gradient(ellipse 28% 32% at 12% 84%, rgba(10,102,194,0.05) 0%, transparent 100%),
+      radial-gradient(ellipse 22% 20% at 58% 44%, rgba(10,102,194,0.018) 0%, transparent 100%);
+  }
+}
+
+@keyframes ambient-shift-dark {
+  0%, 100% {
+    background:
+      radial-gradient(ellipse 44% 38% at 88% 12%, rgba(255,255,255,0.06) 0%, transparent 100%),
+      radial-gradient(ellipse 32% 28% at 8% 90%, rgba(255,255,255,0.04) 0%, transparent 100%);
+  }
+  50% {
+    background:
+      radial-gradient(ellipse 48% 42% at 82% 18%, rgba(255,255,255,0.05) 0%, transparent 100%),
+      radial-gradient(ellipse 28% 32% at 12% 84%, rgba(255,255,255,0.055) 0%, transparent 100%);
+  }
+}
+
+/* Layer 1: Dot grid — subtle moving texture */
+.slide::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 8;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(10,102,194,0.13) 1.3px, transparent 1.3px);
+  background-size: 28px 28px;
+  opacity: 0.28;
+  animation: dot-drift 30s linear infinite;
+}
+
+/* Layer 2: Ambient glow blobs (CSS gradient) */
+.slide::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 8;
+  pointer-events: none;
+  animation: ambient-shift 15s ease-in-out infinite;
+}
+
+/* Dark slide variants */
+.slide--dark::before {
+  background-image: radial-gradient(rgba(255,255,255,0.15) 1.3px, transparent 1.3px);
+  opacity: 0.22;
+}
+
+.slide--dark::after {
+  animation: ambient-shift-dark 15s ease-in-out infinite;
+}
+
+/* ---- Floating blob shapes (via SlideBackground component) ---- */
+.slide-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9;
+  overflow: hidden;
+}
+
+.slide-bg-blob {
+  position: absolute;
+  border-radius: 50%;
+  background: #0A66C2;
+  mix-blend-mode: multiply;
+  filter: blur(6px);
+  will-change: transform;
+}
+
+.slide-bg-blob-1 {
+  width: 40vw;
+  height: 40vw;
+  top: -15%;
+  right: -10%;
+  opacity: 0.04;
+  animation: blob-float-1 12s ease-in-out infinite;
+}
+
+.slide-bg-blob-2 {
+  width: 30vw;
+  height: 30vw;
+  bottom: -12%;
+  left: -6%;
+  opacity: 0.032;
+  animation: blob-float-2 16s ease-in-out infinite;
+  animation-delay: -6s;
+}
+
+.slide-bg-blob-3 {
+  width: 18vw;
+  height: 18vw;
+  top: 32%;
+  left: 44%;
+  opacity: 0.022;
+  animation: blob-float-3 10s ease-in-out infinite;
+  animation-delay: -3s;
+}
+
+.slide--dark .slide-bg-blob {
+  background: #ffffff;
+  opacity: 0.055;
+}
+
+/* Thin accent connector lines */
+.slide-bg-line {
+  position: absolute;
+  pointer-events: none;
+}
+
+.slide-bg-line-v {
+  top: 0;
+  right: 23%;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(to bottom,
+    transparent 0%,
+    rgba(10,102,194,0.18) 25%,
+    rgba(10,102,194,0.18) 75%,
+    transparent 100%
+  );
+  animation: line-pulse 10s ease-in-out infinite;
+}
+
+.slide-bg-line-h {
+  bottom: 28%;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(to right,
+    transparent 0%,
+    rgba(10,102,194,0.14) 20%,
+    rgba(10,102,194,0.14) 80%,
+    transparent 100%
+  );
+  animation: line-pulse 13s ease-in-out infinite;
+  animation-delay: -5s;
+}
+
+.slide--dark .slide-bg-line-v {
+  background: linear-gradient(to bottom,
+    transparent 0%,
+    rgba(255,255,255,0.14) 25%,
+    rgba(255,255,255,0.14) 75%,
+    transparent 100%
+  );
+}
+
+.slide--dark .slide-bg-line-h {
+  background: linear-gradient(to right,
+    transparent 0%,
+    rgba(255,255,255,0.1) 20%,
+    rgba(255,255,255,0.1) 80%,
+    transparent 100%
+  );
+}
+
+/* Micro LinkedIn UI stickers floating in background */
+.slide-bg-sticker {
+  position: absolute;
+  pointer-events: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4vw;
+  padding: 0.55vh 1.1vw;
+  border-radius: 100px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.72vw;
+  font-weight: 600;
+  white-space: nowrap;
+  background: rgba(10,102,194,0.055);
+  border: 1px solid rgba(10,102,194,0.1);
+  color: rgba(10,102,194,0.35);
+  filter: blur(0.4px);
+  will-change: transform;
+}
+
+.slide-bg-sticker-1 {
+  top: 11%;
+  left: 3.5%;
+  animation: blob-float-2 13s ease-in-out infinite;
+  animation-delay: -2s;
+}
+
+.slide-bg-sticker-2 {
+  bottom: 16%;
+  right: 19%;
+  animation: blob-float-1 11s ease-in-out infinite;
+  animation-delay: -8s;
+}
+
+.slide-bg-sticker-3 {
+  top: 62%;
+  left: 7%;
+  animation: blob-float-3 15s ease-in-out infinite;
+  animation-delay: -4s;
+}
+
+.slide--dark .slide-bg-sticker {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.28);
+}

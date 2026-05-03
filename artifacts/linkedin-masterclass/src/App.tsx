@@ -213,6 +213,37 @@ function SlideViewer() {
 // Slides with dark backgrounds — slide number overlay uses light text on these
 const DARK_SLIDE_POSITIONS = new Set([8, 22, 24]);
 
+// Animated background layer injected behind every slide's content
+function SlideBackground() {
+  return (
+    <div className="slide-bg" aria-hidden="true">
+      {/* Floating organic blobs */}
+      <div className="slide-bg-blob slide-bg-blob-1" />
+      <div className="slide-bg-blob slide-bg-blob-2" />
+      <div className="slide-bg-blob slide-bg-blob-3" />
+      {/* Thin connector lines */}
+      <div className="slide-bg-line slide-bg-line-v" />
+      <div className="slide-bg-line slide-bg-line-h" />
+      {/* Micro LinkedIn UI stickers floating in the distance */}
+      <div className="slide-bg-sticker slide-bg-sticker-1">
+        <svg width="0.8vw" height="0.8vw" viewBox="0 0 16 16" fill="currentColor" style={{ flexShrink: 0 }}>
+          <path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zm.75 10.5h-1.5v-4.5h1.5v4.5zm-.75-5.4a.9.9 0 1 1 0-1.8.9.9 0 0 1 0 1.8z"/>
+        </svg>
+        Connect
+      </div>
+      <div className="slide-bg-sticker slide-bg-sticker-2">
+        <svg width="0.8vw" height="0.8vw" viewBox="0 0 16 16" fill="currentColor" style={{ flexShrink: 0 }}>
+          <circle cx="8" cy="8" r="7"/>
+        </svg>
+        Open to Work
+      </div>
+      <div className="slide-bg-sticker slide-bg-sticker-3">
+        ✦ 500+ connections
+      </div>
+    </div>
+  );
+}
+
 function PortraitFallback() {
   return (
     <div className="portrait-fallback">
@@ -346,6 +377,7 @@ function SlideShell() {
                 sectionRefs.current[index] = node;
               }}
             >
+              <SlideBackground />
               <div className="slide-num" aria-hidden="true">
                 {String(slide.position).padStart(2, "0")} / {slideCount}
               </div>
