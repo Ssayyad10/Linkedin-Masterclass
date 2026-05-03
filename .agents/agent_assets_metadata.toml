@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "aUT7xi-8DCf4aT80NqmnK"
+uri = "file://.local/outputs/Linkedin-Masterclass.pptx"
+type = "slides"
+title = "Linkedin Masterclass.pptx"
