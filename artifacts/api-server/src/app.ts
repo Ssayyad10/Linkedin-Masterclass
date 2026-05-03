@@ -8,9 +8,8 @@ import path from "path";
 const app: Express = express();
 
 // ✅ FIXED PATH
-const frontendPath = path.resolve("artifacts/linkedin-masterclass/dist");
+const frontendPath = path.resolve("../linkedin-masterclass/dist");
 
-// ✅ correct
 app.use(express.static(path.join(frontendPath, "public")));
 
 app.get("/", (req, res) => {
